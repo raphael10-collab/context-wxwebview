@@ -23,27 +23,7 @@ private:
 
     void OnAbout (wxCommandEvent&  evt);
 
-    void OnShowTransparent(wxCommandEvent& event);
 
     wxDECLARE_EVENT_TABLE();
 };
 
-
-// Define a new frame type: this is going to the frame showing the
-// effect of wxWindow::SetTransparent and of
-// wxWindow::SetBackgroundStyle(wxBG_STYLE_TRANSPARENT)
-class SeeThroughFrame : public wxFrame
-{
-public:
-    virtual ~SeeThroughFrame();
-    void Create(wxWindow* parent);
-
-private:
-    // event handlers (these functions should _not_ be virtual)
-    void OnPaint(wxPaintEvent& evt);
-
-    void OnAlpha(wxCommandEvent& event);
-
-    // any class wishing to process wxWidgets events must use this macro
-    wxDECLARE_EVENT_TABLE();
-};
